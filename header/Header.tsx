@@ -7,7 +7,7 @@ interface AppState {
   name: string;
 }
 
-export class Header extends Component<AppProps, AppState> {
+export default class Header extends Component<AppProps, AppState> {
   constructor(props) {
     super(props);
     this.state = {

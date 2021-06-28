@@ -1,0 +1,161 @@
+.maif-form .btn:not(.btn-ghost):not(.btn-secondary):not(.btn-tertiary):not(.color-1):not(.btn-interface) {
+  background: #2e404f;
+  color: #fff;
+  }
+  
+  .col-form-container .btn:not(.btn-ghost):not(.btn-secondary):not(.btn-tertiary):not(.color-1):not(.btn-interface) {
+  background: #2e404f;
+  }
+
+  .action-etape .btn {
+  margin-left: 20px;
+  }
+  
+  .btn.active, .btn:active {
+  box-shadow: none;
+  outline: 0;
+  }
+
+  .btn:focus, .btn:hover {
+  color: #fff;
+  text-decoration: none;
+  }
+
+  a, a:focus, a:hover, button, button:focus, button:hover {
+  color: inherit;
+  text-decoration: none;
+  }
+
+  a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+  }
+
+  a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+  }
+
+  .btn {
+  border: none;
+  position: relative;
+  white-space: normal;
+  padding: 12px 28px;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: #c62222;
+  color: #fff;
+  text-decoration: none!important;
+  border-radius: 4px;
+  font-family: maif,Arial,sans-serif;
+  font-weight: 500;
+  letter-spacing: .3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  display: inline-block;
+  }
+
+  a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  }
+
+  a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  }
+
+  *, ::after, ::before {
+  box-sizing: border-box;
+  }
+
+  *, ::after, ::before {
+  box-sizing: border-box;
+  }
+
+  :any-link:active {
+  color: -webkit-activelink;
+  }
+
+  :any-link {
+  color: -webkit-link;
+  text-decoration: underline;
+  cursor: auto;
+  }
+
+  ::marker
+  ::marker {
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  white-space: pre;
+  text-transform: none;
+  }
+  ::before
+
+  *, ::after, ::before {
+  box-sizing: border-box;
+  }
+
+  *, ::after, ::before {
+  box-sizing: border-box;
+  }
+
+  ::after
+
+  *, ::after, ::before {
+  box-sizing: border-box;
+  }
+
+  *, ::after, ::before {
+  box-sizing: border-box;
+  }
+
+  .action-etape {
+  text-align: right;
+  }
+  
+  body, html {
+  -webkit-font-smoothing: antialiased;
+  color: #000;
+  }
+  
+  body {
+  font-family: Arial,sans-serif;
+  font-size: .9375rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
+  text-align: left;
+  }
+
+  body {
+  font-family: Arial,sans-serif;
+  font-size: .9375rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
+  text-align: left;
+  }
+
+  html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  }
+
+  html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  }
+
+  html {
+  color: text;
+  }

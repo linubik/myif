@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
 import Formulaire from './formulaire/Formulaire';
+//import Header from './header/Header';
+import style from './all-formulaires.css';
 
 interface AppProps {}
 interface AppState {
@@ -18,9 +20,8 @@ class App extends Component<AppProps, AppState> {
 
   render() {
     return (
-      <div>
-        <Hello name={this.state.name} />
-        <p>Start editing to see some magic happen :)</p>
+      <div style={style}>
+        
         <Formulaire />
       </div>
     );
