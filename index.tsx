@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
 import Formulaire from './formulaire/Formulaire';
-//import Header from './header/Header';
+import Header from './header/Header';
 import style from './all-formulaires.css';
 
 interface AppProps {}
@@ -21,7 +21,7 @@ class App extends Component<AppProps, AppState> {
   render() {
     return (
       <div style={style}>
-        
+        <Header />
         <Formulaire />
       </div>
     );
