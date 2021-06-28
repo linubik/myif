@@ -17,12 +17,12 @@ export default class Header extends Component<AppProps, AppState> {
 
   render() {
     return (
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="heading type1">Titre contrat / produit / univers</div>
-            <div class="heading type2">Titre type de formulaire</div>
-            <ol class="step-bar step-bar-6 step-bar-active-2">
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-12">
+            <div className="heading type1">Titre contrat / produit / univers</div>
+            <div className="heading type2">Titre type de formulaire</div>
+            <ol className="step-bar step-bar-6 step-bar-active-2">
               <li>
                 <span>Étape 1</span>
               </li>
@@ -42,7 +42,7 @@ export default class Header extends Component<AppProps, AppState> {
                 <span>Étape 6</span>
               </li>
             </ol>
-            <div class="heading type3">Nom étape </div>
+            <div className="heading type3">Nom étape </div>
           </div>
         </div>
       </div>
