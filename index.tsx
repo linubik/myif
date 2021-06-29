@@ -3,7 +3,6 @@ import { render } from 'react-dom';
 import Hello from './Hello';
 import Formulaire from './formulaire/Formulaire';
 import Header from './header/Header';
-import headerStyle from './header/header.css';
 import formulaireStyle from './all-formulaires.css';
 
 interface AppProps {}
@@ -21,9 +20,9 @@ class App extends Component<AppProps, AppState> {
 
   render() {
     return (
-      <div>
-        <Header style={headerStyle}/>
-        <Formulaire style={formulaireStyle}/>
+      <div style={formulaireStyle}>
+        <Header />
+        <Formulaire />
       </div>
     );
   }
