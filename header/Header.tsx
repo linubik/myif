@@ -22,14 +22,14 @@ export default class Header extends Component<AppProps, AppState> {
           <div className="col-sm-12">
             <div className="heading type1">Titre contrat / produit / univers</div>
             <div className="heading type2">Titre type de formulaire</div>
-            <ol className="step-bar step-bar-6 step-bar-active-2">
+            <ol className="step-bar step-bar-6 step-bar-active-3">
               <li>
                 <span>Étape 1</span>
               </li>
-              <li class="active">
+              <li>
                 <span>Étape 2</span>
               </li>
-              <li>
+              <li class="active">
                 <span>Étape 3</span>
               </li>
               <li>
