@@ -1,55 +1,44 @@
-
-.step-bar {
-list-style-type: none;
-padding: 10px 0;
-margin: 0 auto 30px;
-position: relative;
-overflow: hidden;
-color: #2e404f;
+.step-bar.step-bar-6>li {
+width: 16.6666666667%;
 }
-dl, ol, ul {
-margin-top: 0;
-margin-bottom: 1rem;
-}
-dl, ol, ul {
-margin-top: 0;
-margin-bottom: 1rem;
-}
-*, ::after, ::before {
-box-sizing: border-box;
-}
-*, ::after, ::before {
-box-sizing: border-box;
-}
-ol {
+.step-bar>li {
 display: block;
-list-style-type: decimal;
-margin-block-start: 1em;
-margin-block-end: 1em;
-margin-inline-start: 0px;
-margin-inline-end: 0px;
-padding-inline-start: 40px;
+width: 15%;
+float: left;
+position: relative;
+padding-top: 62px;
+text-align: center;
+font-family: maif,Arial,sans-serif;
+font-size: 14px;
+text-transform: uppercase;
 }
-::marker
+*, ::after, ::before {
+box-sizing: border-box;
+}
+*, ::after, ::before {
+box-sizing: border-box;
+}
+li {
+display: list-item;
+text-align: -webkit-match-parent;
+}
 ::marker {
 unicode-bidi: isolate;
 font-variant-numeric: tabular-nums;
 white-space: pre;
 text-transform: none;
 }
-::before
-.step-bar.step-bar-6:before {
-width: 83.3333333333%;
-margin-left: 8.3333333333%;
-}
-.step-bar:after, .step-bar:before {
-content: "";
-width: 100%;
+.step-bar>li:before {
+font-family: maificon;
+content: "";
+color: currentColor;
+font-size: 50px;
+line-height: 50px;
 position: absolute;
-top: 33px;
-height: 4px;
-background: #e7eaeb;
-left: 0;
+top: 0;
+left: 50%;
+margin-left: -25px;
+z-index: 100;
 }
 *, ::after, ::before {
 box-sizing: border-box;
@@ -57,25 +46,22 @@ box-sizing: border-box;
 *, ::after, ::before {
 box-sizing: border-box;
 }
-Pseudo-élément ::after
-.step-bar.step-bar-6.step-bar-active-2:after {
-width: 16.6666666667%;
+.step-bar>li:nth-child(1):after {
+content: "1";
 }
-.step-bar.step-bar-6:after {
-margin-left: 8.3333333333%;
-}
-.step-bar:after {
-background: currentColor;
-width: 0;
-}
-.step-bar:after, .step-bar:before {
-content: "";
-width: 100%;
+.step-bar>li:after {
+content: "0";
+font-family: maif,Arial,sans-serif;
+font-size: 27px;
 position: absolute;
-top: 33px;
-height: 4px;
-background: #e7eaeb;
-left: 0;
+top: 6px;
+left: 50%;
+margin-left: -25px;
+text-align: center;
+width: 50px;
+z-index: 101;
+color: #fff;
+font-weight: 500;
 }
 *, ::after, ::before {
 box-sizing: border-box;
@@ -83,7 +69,13 @@ box-sizing: border-box;
 *, ::after, ::before {
 box-sizing: border-box;
 }
-Hérité de body
+.step-bar {
+list-style-type: none;
+color: #2e404f;
+}
+ol {
+list-style-type: decimal;
+}
 body, html {
 -webkit-font-smoothing: antialiased;
 color: #000;
@@ -116,4 +108,13 @@ line-height: 1.15;
 }
 html {
 color: text;
+}
+
+@font-face {
+  font-family: maificon;
+  font-display: swap;
+  src: url(https://satellites.maif.fr/maif/composants/font/rwd/maificon/maificon.eot?-n7qk42);
+  src: url(https://satellites.maif.fr/maif/composants/font/rwd/maificon/maificon.eot?#iefix-n7qk42) format("embedded-opentype"), url(https://satellites.maif.fr/maif/composants/font/rwd/maificon/maificon.woff2) format("woff2"), url(https://satellites.maif.fr/maif/composants/font/rwd/maificon/maificon.woff?-n7qk42) format("woff"), url(https://satellites.maif.fr/maif/composants/font/rwd/maificon/maificon.ttf?-n7qk42) format("truetype"), url(https://satellites.maif.fr/maif/composants/font/rwd/maificon/maificon.svg?-n7qk42#maificon) format("svg");
+  font-weight: 400;
+  font-style:normal
 }
