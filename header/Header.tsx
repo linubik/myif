@@ -29,7 +29,7 @@ export default class Header extends Component<AppProps, AppState> {
               <li>
                 <span>Étape 2</span>
               </li>
-              <li class="active">
+              <li className="active">
                 <span>Étape 3</span>
               </li>
               <li>
