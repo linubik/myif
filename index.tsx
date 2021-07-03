@@ -15,28 +15,42 @@ class App extends Component<AppProps, AppState> {
     super(props);
     this.state = {
       name: 'React',
-      step: 3,
-      steps: [{id:1, val:"1"},{id:2, val:"2"},{id:3, val:"3"},{id:4, val:"4"},{id:5, val:"5"},{id:6, val:"6"},{id:7,val:"7"}]
+      step: 2,
+      steps: [
+        {id:1, val:"1"},
+        {id:2, val:"2"},
+        {id:3, val:"3"},
+        {id:4, val:"4"},
+        {id:5, val:"5"},
+        {id:6, val:"6"},
+        {id:7,val:"7"}
+      ]
     };
     this.prev = this.prev.bind(this);
     this.next = this.next.bind(this);
   }
 
   render() {
+    const step = this.state.step;
+    console.log("render "+step);
     return (
       <div style={formulaireStyle}>
-        <Header step={this.state.step} steps={this.state.steps}/>
+        <Header step={step} steps={this.state.steps}/>
         <Formulaire next={this.next} prev={this.prev}/>
       </div>
     );
   }
 
-  prev() {
-    this.setState({step : this.state.step-1});
+  prev(e) {
+    this.setState((state) => ({
+      step: state.step -1
+    }));
   }
   
-  next() {
-    this.setState({step : this.state.step+1});
+  next(e) {
+    this.setState((state) => ({
+      step: state.step +1
+    }));
   }
   
 }
