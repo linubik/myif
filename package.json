@@ -1,5 +1,5 @@
 {
-  "homepage": "https://linubik.github.io/myif"
+  "homepage": "https://linubik.github.io/myif",
   "name": "react-ts",
   "version": "0.0.0",
   "private": true,
@@ -11,6 +11,8 @@
     "react-router": "^5.2.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
