@@ -21,7 +21,6 @@ render() {
     return (
       <div className="container">
         <h1>{this.state.step}</h1><br/>
-        <h2>{this.state.steps}</h2><br/>
         <div className="row" >
           <div className="col-sm-12">
             <div className="heading type1">Titre contrat / produit / univers</div>
