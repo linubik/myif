@@ -12,23 +12,21 @@ export default class Header extends Component<AppProps, AppState> {
     super(props);
     this.state = {
       name: 'Header',
-      step : this.props.step,
-      steps : this.props.steps
     };
   }
 
 render() {
     return (
       <div className="container">
-        <h1>{this.state.step}</h1><br/>
+        <h1>{this.props.step}</h1><br/>
         <div className="row" >
           <div className="col-sm-12">
             <div className="heading type1">Titre contrat / produit / univers</div>
             <div className="heading type2">Titre type de formulaire</div>
-            <ol className="step-bar step-bar-{this.state.steps.length} step-bar-active-{this.state.step}">
+            <ol className="step-bar step-bar-{this.props.steps.length} step-bar-active-{this.props.step}">
               {
-                this.state.steps.map((elem,index) => {
-                  return <li key={elem.id} className={index+1 == this.state.step?'active':''}>
+                this.props.steps.map((elem,index) => {
+                  return <li key={elem.id} className={index+1 == this.props.step?'active':''}>
                     <span>{elem.val}</span>
                     </li>
                 })
