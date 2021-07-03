@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Header from '../header/Header';
-/*
-//https://satellites.maif.fr/maif/composants/css/rwd/
-import styles from './all-formulaires.css';
-*/
-//import styles from './style.css';
 
 interface AppProps {}
 interface AppState {
@@ -16,7 +10,9 @@ export default class Formulaire extends Component<AppProps, AppState> {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'Formulaire'
+      name: 'Formulaire',
+      next: this.props.next,
+      prev: this.props.prev
     };
   }
 
@@ -32,10 +28,10 @@ export default class Formulaire extends Component<AppProps, AppState> {
               </p>
               <div className="row action-etape">
                 <div className="col-sm-12">
-                  <a className="btn color-1" href="#">
+                  <a className="btn color-1" href="#" onClick={this.state.prev}>
                     Bouton 1
                   </a>
-                  <a className="btn" href="#">
+                  <a className="btn" href="#" onClick={this.state.next}>
                     Bouton 2
                   </a>
                 </div>
