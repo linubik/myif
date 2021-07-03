@@ -9,11 +9,19 @@ interface AppState {
 export default class Formulaire extends Component<AppProps, AppState> {
   constructor(props) {
     super(props);
+    this.prev = this.prev.bind(this);
+    this.next = this.next.bind(this);
     this.state = {
       name: 'Formulaire',
-      next: this.props.next,
-      prev: this.props.prev
     };
+  }
+
+  prev(e) {
+    this.props.prev(e);
+  }
+
+  next(e) {
+    this.props.next(e);
   }
 
   render() {
@@ -28,10 +36,10 @@ export default class Formulaire extends Component<AppProps, AppState> {
               </p>
               <div className="row action-etape">
                 <div className="col-sm-12">
-                  <a className="btn color-1" href="#" onClick={this.state.prev}>
+                  <a className="btn color-1" href="#" onClick={this.prev}>
                     Bouton 1
                   </a>
-                  <a className="btn" href="#" onClick={this.state.next}>
+                  <a className="btn" href="#" onClick={this.next}>
                     Bouton 2
                   </a>
                 </div>
