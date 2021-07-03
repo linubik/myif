@@ -29,8 +29,8 @@ render() {
             <ol className="step-bar step-bar-{this.state.steps.length} step-bar-active-{this.state.step}">
               {
                 this.state.steps.map((elem,index) => {
-                  return <li key={elem} className={index+1 == this.state.step?'active':''}>
-                    <span>{elem}</span>
+                  return <li key={elem.id} className={index+1 == this.state.step?'active':''}>
+                    <span>{elem.val}</span>
                     </li>
                 })
               }
