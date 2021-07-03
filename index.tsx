@@ -16,7 +16,7 @@ class App extends Component<AppProps, AppState> {
     this.state = {
       name: 'React',
       step: 3,
-      steps: ["1","2","3","4","5","6","7"]
+      steps: [{id:1, val:"1"},{id:2, val:"2"},{id:3, val:"3"},{id:4, val:"4"},{id:5, val:"5"},{id:6, val:"6"},{id:7,val:"7"}]
     };
     this.prev = this.prev.bind(this);
     this.next = this.next.bind(this);
