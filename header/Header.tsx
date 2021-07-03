@@ -11,36 +11,29 @@ export default class Header extends Component<AppProps, AppState> {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'Header'
+      name: 'Header',
+      step : this.props.step,
+      steps : this.props.steps
     };
   }
 
-  render() {
+render() {
     return (
       <div className="container">
-        <div className="row">
+        <h1>{this.state.step}</h1><br/>
+        <h2>{this.state.steps}</h2><br/>
+        <div className="row" >
           <div className="col-sm-12">
             <div className="heading type1">Titre contrat / produit / univers</div>
             <div className="heading type2">Titre type de formulaire</div>
-            <ol className="step-bar step-bar-6 step-bar-active-3">
-              <li>
-                <span>Étape 1</span>
-              </li>
-              <li>
-                <span>Étape 2</span>
-              </li>
-              <li className="active">
-                <span>Étape 3</span>
-              </li>
-              <li>
-                <span>Étape 4</span>
-              </li>
-              <li>
-                <span>Étape 5</span>
-              </li>
-              <li>
-                <span>Étape 6</span>
-              </li>
+            <ol className="step-bar step-bar-{this.state.steps.length} step-bar-active-{this.state.step}">
+              {
+                this.state.steps.map((elem,index) => {
+                  return <li key={elem} className={index+1 == this.state.step?'active':''}>
+                    <span>{elem}</span>
+                    </li>
+                })
+              }
             </ol>
             <div className="heading type3">Nom étape </div>
           </div>
@@ -48,4 +41,5 @@ export default class Header extends Component<AppProps, AppState> {
       </div>
     );
   }
+
 }
