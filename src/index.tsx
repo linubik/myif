@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Hello from './Hello';
 import Formulaire from './formulaire/Formulaire';
 import Header from './header/Header';
-import formulaireStyle from './all-formulaires.css';
+import {Step} from './Step';
+import formulaireStyle from './all-formulaires.module.css';
 
 interface AppProps {}
 interface AppState {
   name: string;
+  step:number;
+  steps:Array<Step>;
 }
 
 class App extends Component<AppProps, AppState> {
-  constructor(props) {
+  constructor(props:AppProps) {
     super(props);
     this.state = {
       name: 'React',
@@ -41,13 +43,13 @@ class App extends Component<AppProps, AppState> {
     );
   }
 
-  prev(e) {
+  prev() {
     this.setState((state) => ({
       step: state.step -1
     }));
   }
   
-  next(e) {
+  next() {
     this.setState((state) => ({
       step: state.step +1
     }));

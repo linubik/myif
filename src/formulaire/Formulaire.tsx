@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
-interface AppProps {}
+interface AppProps {
+  prev:any,
+  next:any
+}
 interface AppState {
   name: string;
 }
 
 export default class Formulaire extends Component<AppProps, AppState> {
-  constructor(props) {
+  constructor(props:AppProps) {
     super(props);
     this.prev = this.prev.bind(this);
     this.next = this.next.bind(this);
@@ -16,12 +19,12 @@ export default class Formulaire extends Component<AppProps, AppState> {
     };
   }
 
-  prev(e) {
-    this.props.prev(e);
+  prev() {
+    this.props.prev();
   }
 
-  next(e) {
-    this.props.next(e);
+  next() {
+    this.props.next();
   }
 
   render() {

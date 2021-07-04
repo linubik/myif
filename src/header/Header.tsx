@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Hello from './Hello';
+import { Step } from '../Step';
 
-interface AppProps {}
+interface AppProps {
+  step:number,
+  steps:Array<Step>
+}
 interface AppState {
   name: string;
 }
 
 export default class Header extends Component<AppProps, AppState> {
-  constructor(props) {
+  constructor(props:AppProps) {
     super(props);
     this.state = {
       name: 'Header',
